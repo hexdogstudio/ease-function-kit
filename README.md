@@ -52,3 +52,4 @@ private IEnumerator ScaleProcess()
     transform.localScale = end;
 }
 ```
+<b>NOTE:</b> Some functions like `OutBack` may overshoot the the range of `[0.0, 1.0]`. In these cases you should use `LerpUnclamped` instead of `Lerp`.
