@@ -35,12 +35,9 @@ This implementation provides a simple set of easing functions for various speed 
 ### Example of Usage
 Instead of the direct value of `t / time`, we may use the output of `OutBack` function to simulate a more organic acceleration.
 ```cs
-private IEnumerator ScaleProcess()
+private IEnumerator ScaleProcess(Vector2 from, Vector2 to, float time)
 {
-    Vector2 from = transform.localScale;
-    Vector2 to = new Vector2(1.25f, 1.25f);
     float t = 0.0f;
-    float time = 0.15f;
 
     while (t < time)
     {
