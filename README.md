@@ -33,7 +33,7 @@ This implementation provides a simple set of easing functions for various speed 
 - **InOutQuart**
 
 ### Example of Usage
-Instead of the direct value of `t / time`, we use the output of `OutBack` function to simulate a more organic acceleration.
+Instead of the direct value of `t / time`, we may use the output of `OutBack` function to simulate a more organic acceleration.
 ```cs
 private IEnumerator ScaleProcess()
 {
