@@ -32,3 +32,24 @@ This implementation provides a simple set of easing functions for various speed 
 - **OutQuart**
 - **InOutQuart**
 
+### Example of Usage
+
+```cs
+private IEnumerator ScaleProcess()
+{
+    Vector2 from = transform.localScale;
+    Vector2 to = new Vector2(1.25f, 1.25f);
+    float t = 0.0f;
+    float time = 0.15f;
+
+    while (t < time)
+    {
+        t += Time.deltaTime;
+        // Instead of the dircet value of t / time, we use the output of OutBack function to simulate a more organic acceleration.
+        transform.localScale = Vector2.LerpUnclamped(from, to, Ease.OutBack(t / time));
+        yield return null;
+    }
+
+    transform.localScale = end;
+}
+```
