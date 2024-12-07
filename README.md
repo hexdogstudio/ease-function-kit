@@ -4,33 +4,33 @@ This implementation provides a simple set of easing functions for various speed 
 
 ### Easing Functions
 
-- **InExpo**
-- **OutExpo**
-- **InOutExpo**
-- **InBack**
-- **OutBack**
-- **InOutBack**
-- **InSine**
-- **OutSine**
-- **InOutSine**
-- **InCubic**
-- **OutCubic**
-- **InOutCubic**
-- **InQuint**
-- **OutQuint**
-- **InOutQuint**
-- **InCirc**
-- **OutCirc**
-- **InOutCirc**
-- **InElastic**
-- **OutElastic**
-- **InOutElastic**
-- **InQuad**
-- **OutQuad**
-- **InOutQuad**
-- **InQuart**
-- **OutQuart**
-- **InOutQuart**
+- [InExpo](https://easings.net/#easeInExpo)
+- [OutExpo](https://easings.net/#easeOutExpo)
+- [InOutExpo](https://easings.net/#easeInOutExpo)
+- [InBack](https://easings.net/#easeInBack)
+- [OutBack](https://easings.net/#easeOutBack)
+- [InOutBack](https://easings.net/#easeInOutBack)
+- [InSine](https://easings.net/#easeInSine)
+- [OutSine](https://easings.net/#easeOutSine)
+- [InOutSine](https://easings.net/#easeInOutSine)
+- [InCubic](https://easings.net/#easeInCubic)
+- [OutCubic](https://easings.net/#easeOutCubic)
+- [InOutCubic](https://easings.net/#easeInOutCubic)
+- [InQuint](https://easings.net/#easeInQuint)
+- [OutQuint](https://easings.net/#easeOutQuint)
+- [InOutQuint](https://easings.net/#easeInOutQuint)
+- [InCirc](https://easings.net/#easeInCirc)
+- [OutCirc](https://easings.net/#easeOutCirc)
+- [InOutCirc](https://easings.net/#easeInOutCirc)
+- [InElastic](https://easings.net/#easeInElastic)
+- [OutElastic](https://easings.net/#easeOutElastic)
+- [InOutElastic](https://easings.net/#easeInOutElastic)
+- [InQuad](https://easings.net/#easeInQuad)
+- [OutQuad](https://easings.net/#easeOutQuad)
+- [InOutQuad](https://easings.net/#easeInOutQuad)
+- [InQuart](https://easings.net/#easeInQuart)
+- [OutQuart](https://easings.net/#easeOutQuart)
+- [InOutQuart](https://easings.net/#easeInOutQuart)
 
 ### Example of Usage
 Instead of the direct value of `t / time`, we may use the output of `OutBack` function to simulate a more organic acceleration.
