@@ -35,7 +35,7 @@ This implementation provides a simple set of easing functions for various speed 
 ### Example of Usage
 Instead of the direct value of `t / time`, we may use the output of `OutBack` function to simulate a more organic acceleration.
 ```cs
-private IEnumerator ScaleProcess(Vector2 from, Vector2 to, float time)
+private IEnumerator ScaleTween(Vector2 from, Vector2 to, float time)
 {
     float t = 0.0f;
 
@@ -46,7 +46,7 @@ private IEnumerator ScaleProcess(Vector2 from, Vector2 to, float time)
         yield return null;
     }
 
-    transform.localScale = end;
+    transform.localScale = to;
 }
 ```
 <b>NOTE:</b> Some functions like `OutBack` may overshoot the the range of `[0.0, 1.0]`. In these cases you should use `LerpUnclamped` instead of `Lerp`.
