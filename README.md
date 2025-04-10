@@ -33,8 +33,10 @@ This implementation provides a simple set of easing functions for various speed 
 - [InOutQuart](https://easings.net/#easeInOutQuart)
 
 ### Example of Usage
-Instead of the direct value of `t / time`, we may use the output of `OutBack` function to simulate a more organic acceleration.
+Instead of the direct value of `t / time`, we may use the output of the `Calc` function to simulate a more organic acceleration. In the example we used the `OutBack` acceleration function.
 ```cs
+[SerializeField] private EaseCurve curve = new EaseCurve(Ease.OutBack);
+
 private IEnumerator ScaleTween(Vector2 from, Vector2 to, float time)
 {
     float t = 0.0f;
@@ -42,11 +44,11 @@ private IEnumerator ScaleTween(Vector2 from, Vector2 to, float time)
     while (t < time)
     {
         t += Time.deltaTime;
-        transform.localScale = Vector2.LerpUnclamped(from, to, Ease.OutBack(t / time));
+        transform.localScale = Vector2.LerpUnclamped(from, to, curve.Calc(t / time));
         yield return null;
     }
 
     transform.localScale = to;
 }
 ```
-<b>NOTE:</b> Some functions like `OutBack` may overshoot the the range of `[0.0, 1.0]`. In these cases you should use `LerpUnclamped` instead of `Lerp`.
+<b>NOTE:</b> Some curves like `OutBack` may overshoot the the range of `[0.0, 1.0]`. In these cases you should use `LerpUnclamped` instead of `Lerp`.
