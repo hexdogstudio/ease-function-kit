@@ -69,6 +69,41 @@ public static class Ease
         };
     }
 
+    public static System.Func<float, float> Func(Type type)
+    {
+        return type switch
+        {
+            Type.InExpo => InExpo,
+            Type.OutExpo => OutExpo,
+            Type.InOutExpo => InOutExpo,
+            Type.InBack => InBack,
+            Type.OutBack => OutBack,
+            Type.InOutBack => InOutBack,
+            Type.InSine => InSine,
+            Type.OutSine => OutSine,
+            Type.InOutSine => InOutSine,
+            Type.InCubic => InCubic,
+            Type.OutCubic => OutCubic,
+            Type.InOutCubic => InOutCubic,
+            Type.InQuint => InQuint,
+            Type.OutQuint => OutQuint,
+            Type.InOutQuint => InOutQuint,
+            Type.InCirc => InCirc,
+            Type.OutCirc => OutCirc,
+            Type.InOutCirc => InOutCirc,
+            Type.InElastic => InElastic,
+            Type.OutElastic => OutElastic,
+            Type.InOutElastic => InOutElastic,
+            Type.InQuad => InQuad,
+            Type.OutQuad => OutQuad,
+            Type.InOutQuad => InOutQuad,
+            Type.InQuart => InQuart,
+            Type.OutQuart => OutQuart,
+            Type.InOutQuart => InOutQuart,
+            _ => (x) => x,
+        };
+    }
+
     //Expo
     public static float InOutExpo(float x)
     {
