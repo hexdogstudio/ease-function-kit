@@ -35,7 +35,7 @@ This implementation provides a simple set of easing functions for various speed 
 ### Example of Usage
 Instead of the direct value of `t / time`, we may use the output of the `Calc` function to simulate a more organic acceleration. In the example we used the `OutBack` acceleration function.
 ```cs
-[SerializeField] private EaseCurve curve = new EaseCurve(Ease.OutBack);
+[SerializeField] private EaseCurve curve = new EaseCurve(Ease.Type.OutBack);
 
 private IEnumerator ScaleTween(Vector2 from, Vector2 to, float time)
 {
