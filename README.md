@@ -53,3 +53,6 @@ private IEnumerator ScaleTween(Vector2 from, Vector2 to, float time)
 ```
 > [!Note] 
 > Some curves like `OutBack` may overshoot the the range of `[0.0, 1.0]`. In these cases you should use `LerpUnclamped` instead of `Lerp`.
+
+## License
+- [MIT](https://choosealicense.com/licenses/mit/)
