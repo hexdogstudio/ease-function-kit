@@ -2,7 +2,16 @@
 
 This implementation provides a simple set of easing functions for various speed modifications in Unity. Easing functions are commonly used in animations to create smooth transitions and control the rate of change over time, allowing for effects like acceleration, deceleration, and oscillation. These native C# implementations are adapted from examples available on [Easings.net](https://easings.net/), a popular resource for visualizing and understanding easing curves. The functions are designed to work seamlessly with Unity’s animation and movement systems, giving developers the ability to easily apply different types of motion, such as linear, quadratic, cubic, and elastic, to their game objects or UI elements. These easing functions are ideal for fine-tuning animations, transitions, and movement behaviors in games or interactive applications.
 
-### Easing Functions
+## Installation Guide
+
+Dowload the latest `.unitypackage` from the repository at `/Packages` folder.
+<br>
+To import a local asset package in Unity:
+1. Open the project in the Editor where you want to import the asset package.
+2. Choose `Assets` > `Import Package` > `Custom Package`. A file browser appears, prompting you to locate the `.unitypackage` file.
+3. In the file browser, select the file you want to import and click `Open`. The Import Unity Package window displays all the items in the package already selected, ready to install.
+
+## Easing Functions
 
 - [InExpo](https://easings.net/#easeInExpo)
 - [OutExpo](https://easings.net/#easeOutExpo)
@@ -32,7 +41,7 @@ This implementation provides a simple set of easing functions for various speed 
 - [OutQuart](https://easings.net/#easeOutQuart)
 - [InOutQuart](https://easings.net/#easeInOutQuart)
 
-### Example of Usage
+## Example of Usage
 Instead of the direct value of `t / time`, we may use the output of the `Calc` function to simulate a more organic acceleration. In the example we used the `OutBack` acceleration function.
 ```cs
 [SerializeField] private EaseCurve curve = new EaseCurve(Ease.Type.OutBack);
